@@ -37,17 +37,19 @@ vms_config = {
       vm_cpu_count = "2"
       vm_ram_size  = "4096"
       vm_count = "1"
+      vm_exist = "1"
     }
     masters = {
       vm_cpu_count = "2"
       vm_ram_size  = "4096"
       vm_count = "3"
+       vm_exist = "3"
     },
     workers = {
       vm_cpu_count = "2"
       vm_ram_size  = "8192"
       vm_count = "2"
-      vm_exist = "3"
+      vm_exist = "2"
     }
 }
 
