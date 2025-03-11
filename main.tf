@@ -28,7 +28,7 @@ resource "vcd_vapp_vm" "k8s_workers_vms" {
 #  depends_on       = [vcd_vapp.k8s_mgmt_vapp,
 #                      vcd_vapp_org_network.vappOrgNet]
   
-  vapp_name        = vcd_vapp.k8s_mgmt_vapp.name
+  vapp_name        = var.vcloud.vapp_name #vcd_vapp.k8s_mgmt_vapp.name
   name             = "${var.project.owner_org}-${var.project.name}-${var.project.env_name}-wrk-${format("%02s", (var.vms_config.workers.vm_exist + count.index + 1))}"
   count            = var.vms_config.workers.vm_count
 
